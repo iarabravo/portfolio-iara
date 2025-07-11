@@ -4,153 +4,170 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iara Bravo | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papNmFeGZCkA5oCeYmOd/YvB6cCKtOcQqkTbP7uLV43bMTY5dAYp8qkG0Rm7uvhDzEoAKnU7wPvZz9Db32Er8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background: #111;
-      color: #eee;
-      line-height: 1.6;
-      scroll-behavior: smooth;
+      font-family: 'Outfit', sans-serif;
+      background-color: #f0ead2;
+      color: #6c584c;
+      padding: 2rem;
     }
+
     header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 4rem 2rem 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
     }
+
+    header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
     header h1 {
       font-size: 3rem;
-      font-weight: 800;
+      color: #adc178;
     }
+
     header p {
       font-size: 1.2rem;
-      color: #aaa;
-      margin-top: 0.5rem;
+      color: #a98467;
     }
-    .section {
-      max-width: 900px;
-      margin: auto;
-      padding: 4rem 2rem;
+
+    section {
+      margin-bottom: 4rem;
     }
-    .section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
-      color: #58d5ff;
-      border-bottom: 1px solid #333;
+
+    h2 {
+      color: #adc178;
+      border-bottom: 2px solid #dde5b6;
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
-    .bio-timeline {
-      border-left: 2px solid #444;
-      padding-left: 2rem;
+
+    ul.timeline {
+      list-style: none;
+      position: relative;
     }
-    .bio-timeline div {
-      margin-bottom: 1.5rem;
+
+    ul.timeline::before {
+      content: '';
+      background: #adc178;
+      display: inline-block;
+      position: absolute;
+      left: 15px;
+      width: 2px;
+      height: 100%;
+      z-index: 400;
     }
-    .bio-timeline span {
-      display: block;
-      font-weight: bold;
-      color: #58d5ff;
+
+    ul.timeline > li {
+      margin: 20px 0;
+      padding-left: 40px;
     }
-    .projects {
+
+    .project-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
     }
-    .card {
-      background: #1e1e1e;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      transition: transform 0.3s ease;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+
+    .project {
+      background-color: #dde5b6;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-    .card:hover {
-      transform: scale(1.02);
-    }
-    .card h3 {
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-    .card p {
-      color: #ccc;
-    }
+
     footer {
       text-align: center;
-      padding: 2rem;
-      color: #666;
-      background: #0a0a0a;
+      margin-top: 3rem;
     }
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
+
     .socials a {
-      color: #58d5ff;
+      margin: 0 0.5rem;
+      color: #6c584c;
+      text-decoration: none;
       font-size: 1.5rem;
-      transition: color 0.3s;
     }
-    .socials a:hover {
-      color: #fff;
+
+    .hero-animation {
+      width: 100%;
+      max-width: 500px;
+      margin: 2rem auto;
     }
   </style>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
+    <img src="tu-foto.jpg" alt="Foto de Iara Bravo">
     <h1>Iara Bravo</h1>
-    <p>Ingeniera en Sistemas · Desarrollo Web · Portfolio interactivo</p>
-    <div class="socials">
-      <a href="https://github.com/iarabravo" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="mailto:iarabravo2017@hotmail.com"><i class="fas fa-envelope"></i></a>
+    <p>Desarrolladora Web • Diseñadora de Interfaces • Creativa Digital</p>
+    <div class="hero-animation">
+      <img src="https://raw.githubusercontent.com/craftzdog/craftzdog-homepage/main/public/images/hero.svg" alt="Animación Hero">
     </div>
   </header>
 
-  <section class="section" data-aos="fade-up">
+  <section data-aos="fade-up">
     <h2>Sobre mí</h2>
-    <p>Soy Iara Bravo, desarrolladora web e ingeniera en sistemas. Trabajo con tecnologías como HTML, CSS, JavaScript y WordPress, y me enfoco en construir soluciones visuales modernas, responsivas y orientadas a usuarios reales.</p>
+    <ul class="timeline">
+      <li>🎓 Ingeniería en Sistemas – Universidad de Palermo</li>
+      <li>👩‍💻 Desarrollo de sistemas web modernos y funcionales</li>
+      <li>🛠️ Stack: HTML, CSS, JavaScript, PHP, MySQL, WordPress</li>
+      <li>🎨 Diseño UI/UX y creación de experiencias atractivas</li>
+    </ul>
   </section>
 
-  <section class="section" data-aos="fade-up">
-    <h2>Línea de tiempo</h2>
-    <div class="bio-timeline">
-      <div><span>2025</span> Me recibo de Ingeniera en Sistemas en la Universidad de Palermo</div>
-      <div><span>2024</span> Desarrollo proyectos con WordPress para marcas reales</div>
-      <div><span>2023</span> Trabajo en automatización con Google Apps Script</div>
-      <div><span>2022</span> Inicio mi formación en desarrollo web full stack</div>
-    </div>
-  </section>
-
-  <section class="section" data-aos="fade-up">
+  <section data-aos="fade-up">
     <h2>Proyectos</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>Batuk Huoky</h3>
-        <p>E-commerce en WordPress para tienda de indumentaria masculina.</p>
+    <div class="project-list">
+      <div class="project">
+        <h3>Sistema Hotelero "Glade"</h3>
+        <p>Aplicación para gestión completa de un hotel. Incluye reservas, usuarios, habitaciones y pagos.</p>
+        <a href="https://github.com/iarabravo/sistema-hotelero" target="_blank">Ver en GitHub</a>
       </div>
-      <div class="card">
+      <div class="project">
         <h3>RP Uniformes</h3>
-        <p>Landing institucional para empresa de uniformes laborales.</p>
+        <p>Sitio e-commerce hecho en WordPress con WooCommerce, pasarela de pagos, formulario de contacto y diseño responsive.</p>
+        <a href="https://github.com/iarabravo/RP-uniformes" target="_blank">Ver en GitHub</a>
       </div>
-      <div class="card">
+      <div class="project">
         <h3>Estudio Contable Bravo</h3>
-        <p>Sitio profesional para estudio contable con formulario de contacto.</p>
+        <p>Landing page profesional para un estudio contable. Desarrollo completo en WordPress.</p>
+        <a href="https://github.com/iarabravo/estudio-contable-bravo" target="_blank">Ver en GitHub</a>
       </div>
-      <div class="card">
-        <h3>Sistema Hotelero</h3>
-        <p>App web de gestión hotelera con reservas y disponibilidad.</p>
+      <div class="project">
+        <h3>Batuk Huoky</h3>
+        <p>Sitio institucional para marca de indumentaria. Diseño urbano, moderno y minimalista.</p>
+        <a href="https://github.com/iarabravo/batuk-huoky" target="_blank">Ver en GitHub</a>
       </div>
     </div>
   </section>
 
   <footer>
-    &copy; Iara Bravo 2025 – Todos los derechos reservados.
+    <h2>Contacto</h2>
+    <div class="socials">
+      <a href="mailto:iarabravo.dev@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/iarabravo" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/iarabravo" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
