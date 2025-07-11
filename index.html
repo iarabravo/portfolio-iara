@@ -16,6 +16,7 @@
       --accent: #adc178;
       --section: #dde5b6;
       --soft: #a98467;
+      --link: #5a4231;
     }
     body.dark-mode {
       --bg: #121212;
@@ -23,6 +24,7 @@
       --accent: #90ee90;
       --section: #1e1e1e;
       --soft: #aaa;
+      --link: #d2b48c;
     }
     * {
       box-sizing: border-box;
@@ -116,6 +118,14 @@
     .project:hover {
       transform: translateY(-5px);
     }
+    .project a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .project a:hover {
+      text-decoration: underline;
+    }
     footer {
       text-align: center;
       margin-top: 3rem;
@@ -141,7 +151,7 @@
   </div>
 
   <header data-aos="fade-down">
-    <img src="foto.jpeg" alt="Foto de Iara Bravo">
+    <img src="tu-foto.jpg" alt="Foto de Iara Bravo">
     <h1>Iara Candela Bravo</h1>
     <p>Desarrolladora Web • Diseñadora de Interfaces • Creativa Digital</p>
   </header>
