@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iara Bravo | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0e0e0e;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #cfcfcf;
+    }
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #7ce3ff;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #121212;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Iara Bravo</h1>
+    <p>Ingeniera en Sistemas | Desarrolladora Web | Creativa y Proactiva</p>
+  </header>
+
+  <section class="section">
+    <h2>Sobre mí</h2>
+    <p>Hola! Soy Iara Bravo, ingeniera en sistemas y desarrolladora web con experiencia en WordPress, HTML, CSS, JavaScript y automatizaciones. Me apasiona crear soluciones funcionales y estéticas, adaptadas a cada necesidad. En este portfolio vas a encontrar algunos de los proyectos que realicé tanto para clientes como personales.</p>
+  </section>
+
+  <section class="section">
+    <h2>Proyectos</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Batuk Huoky</h3>
+        <p>E-commerce de indumentaria masculina desarrollado en WordPress + WooCommerce con diseño moderno y catálogo filtrable.</p>
+      </div>
+      <div class="card">
+        <h3>RP Uniformes</h3>
+        <p>Web institucional para empresa de uniformes con catálogo de productos, formulario de contacto y diseño limpio.</p>
+      </div>
+      <div class="card">
+        <h3>Estudio Contable Bravo</h3>
+        <p>Landing profesional para estudio contable, con secciones de servicios, contacto y mapa de ubicación.</p>
+      </div>
+      <div class="card">
+        <h3>Sistema Hotelero</h3>
+        <p>Aplicación web desarrollada en JavaScript para gestión de reservas, habitaciones y control de disponibilidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Creado por Iara Bravo · 2025
+  </footer>
+</body>
+</html>
