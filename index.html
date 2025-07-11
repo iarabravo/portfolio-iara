@@ -111,6 +111,10 @@
       padding: 1rem;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
     }
     footer {
       text-align: center;
@@ -154,7 +158,7 @@
 
   <section data-aos="fade-up">
     <h2>Proyectos</h2>
-    <div class="project-list">
+    <div class="project-list" data-aos="fade-up">
       <div class="project">
         <h3>Sistema Hotelero "Glade"</h3>
         <p>Aplicación para gestión completa de un hotel. Incluye reservas, usuarios, habitaciones y pagos.</p>
