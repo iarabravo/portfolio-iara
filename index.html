@@ -44,17 +44,16 @@
     }
     .mode-toggle {
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: 1.2rem;
       color: var(--text);
       background: none;
-      border: 2px solid var(--accent);
+      border: none;
       padding: 0.4rem 0.9rem;
       border-radius: 20px;
       transition: background 0.3s, color 0.3s;
     }
-    .mode-toggle:hover {
-      background: var(--accent);
-      color: #fff;
+    .mode-toggle i {
+      font-size: 1.2rem;
     }
     header {
       text-align: center;
@@ -133,7 +132,7 @@
 <body>
   <div class="topbar">
     <button class="mode-toggle" onclick="toggleMode(this)">
-      Claro
+      <i class="fas fa-sun"></i>
     </button>
   </div>
 
@@ -188,7 +187,7 @@
     <h2>Contacto</h2>
     <div class="socials">
       <a href="mailto:iarabravo.dev@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/iara-candela-bravo-7b1480362/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/iarabravo" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/iarabravo" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://instagram.com/iarabravo" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
@@ -200,10 +199,13 @@
 
     function toggleMode(button) {
       document.body.classList.toggle('dark-mode');
+      const icon = button.querySelector('i');
       if (document.body.classList.contains('dark-mode')) {
-        button.textContent = 'Oscuro';
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
       } else {
-        button.textContent = 'Claro';
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
       }
     }
   </script>
